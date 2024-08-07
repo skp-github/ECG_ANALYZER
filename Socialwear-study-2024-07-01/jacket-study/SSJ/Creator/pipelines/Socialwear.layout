@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<ssjCreator version="1">
+  <pipeLayout>
+    <component X="1" Y="10" />
+    <component X="5" Y="10" />
+    <component X="9" Y="10" />
+    <component X="9" Y="6" />
+    <component X="5" Y="6" />
+    <component X="1" Y="15" />
+    <component X="5" Y="15" />
+    <component X="9" Y="15" />
+    <component X="11" Y="20" />
+    <component X="7" Y="20" />
+    <component X="3" Y="20" />
+  </pipeLayout>
+</ssjCreator>

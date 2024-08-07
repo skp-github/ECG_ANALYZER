@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<ssjSaveFile version="7">
+  <framework>
+    <options>
+      <option name="bufferSize" value="2.0" />
+      <option name="countdown" value="3" />
+      <option name="log" value="false" />
+      <option name="loglevel" value="VERBOSE" />
+      <option name="logpath" value="/storage/emulated/0/SSJ/[time]" />
+      <option name="logtimeout" value="1.0" />
+      <option name="sync" value="NONE" />
+      <option name="syncInterval" value="10.0" />
+      <option name="syncPort" value="0" />
+      <option name="terminateOnError" value="false" />
+      <option name="waitSensorConnect" value="30.0" />
+      <option name="waitThreadKill" value="30.0" />
+    </options>
+  </framework>
+  <sensorChannelList>
+    <sensorChannel class="hcm.ssj.polar.PolarACCChannel" id="229904984">
+      <options>
+        <option name="sampleRate" value="50" />
+      </options>
+    </sensorChannel>
+    <sensorChannel class="hcm.ssj.polar.PolarECGChannel" id="163954711">
+      <options>
+        <option name="sampleRate" value="130" />
+      </options>
+    </sensorChannel>
+    <sensorChannel class="hcm.ssj.polar.PolarACCChannel" id="69262370">
+      <options>
+        <option name="sampleRate" value="50" />
+      </options>
+    </sensorChannel>
+  </sensorChannelList>
+  <sensorList>
+    <sensor class="hcm.ssj.polar.Polar" id="8569833">
+      <options>
+        <option name="deviceIdentifier" value="B700EB23" />
+      </options>
+      <providerList>
+        <providerId id="69262370" />
+      </providerList>
+    </sensor>
+    <sensor class="hcm.ssj.polar.Polar" id="68994972">
+      <options>
+        <option name="deviceIdentifier" value="B6F3E229" />
+      </options>
+      <providerList>
+        <providerId id="229904984" />
+        <providerId id="163954711" />
+      </providerList>
+    </sensor>
+  </sensorList>
+  <transformerList />
+  <consumerList>
+    <consumer class="hcm.ssj.file.FileWriter" id="255909127" delta="0.0">
+      <options>
+        <option name="fileName" value="breath" />
+        <option name="path" value="/storage/emulated/0/SSJ/[time]" />
+        <option name="merge" value="true" />
+        <option name="separator" value=" " />
+        <option name="type" value="ASCII" />
+      </options>
+      <providerList>
+        <providerId id="229904984" />
+      </providerList>
+    </consumer>
+    <consumer class="hcm.ssj.file.FileWriter" id="219047423" delta="0.0">
+      <options>
+        <option name="fileName" value="ecg" />
+        <option name="path" value="/storage/emulated/0/SSJ/[time]" />
+        <option name="merge" value="true" />
+        <option name="separator" value=" " />
+        <option name="type" value="ASCII" />
+      </options>
+      <providerList>
+        <providerId id="163954711" />
+      </providerList>
+    </consumer>
+    <consumer class="hcm.ssj.file.FileWriter" id="231869942" delta="0.0">
+      <options>
+        <option name="fileName" value="foot" />
+        <option name="path" value="/storage/emulated/0/SSJ/[time]" />
+        <option name="merge" value="true" />
+        <option name="separator" value=" " />
+        <option name="type" value="ASCII" />
+      </options>
+      <providerList>
+        <providerId id="69262370" />
+      </providerList>
+    </consumer>
+    <consumer class="hcm.ssj.graphic.SignalPainter" id="7449089" delta="0.0">
+      <options>
+        <option name="legend" value="true" />
+        <option name="manualBounds" value="false" />
+        <option name="max" value="1.0" />
+        <option name="min" value="0.0" />
+        <option name="numHLabels" value="2" />
+        <option name="numVLabels" value="5" />
+        <option name="renderMax" value="true" />
+        <option name="secondScaleDim" value="0" />
+        <option name="secondScaleMax" value="1.0" />
+        <option name="secondScaleMin" value="0.0" />
+        <option name="secondScaleStream" value="1" />
+        <option name="size" value="20.0" />
+      </options>
+      <providerList>
+        <providerId id="69262370" />
+      </providerList>
+    </consumer>
+    <consumer class="hcm.ssj.graphic.SignalPainter" id="40883992" delta="0.0">
+      <options>
+        <option name="legend" value="true" />
+        <option name="manualBounds" value="false" />
+        <option name="max" value="1.0" />
+        <option name="min" value="0.0" />
+        <option name="numHLabels" value="2" />
+        <option name="numVLabels" value="5" />
+        <option name="renderMax" value="true" />
+        <option name="secondScaleDim" value="0" />
+        <option name="secondScaleMax" value="1.0" />
+        <option name="secondScaleMin" value="0.0" />
+        <option name="secondScaleStream" value="1" />
+        <option name="size" value="20.0" />
+      </options>
+      <providerList>
+        <providerId id="163954711" />
+      </providerList>
+    </consumer>
+    <consumer class="hcm.ssj.graphic.SignalPainter" id="73935083" delta="0.0">
+      <options>
+        <option name="legend" value="true" />
+        <option name="manualBounds" value="false" />
+        <option name="max" value="1.0" />
+        <option name="min" value="0.0" />
+        <option name="numHLabels" value="2" />
+        <option name="numVLabels" value="5" />
+        <option name="renderMax" value="true" />
+        <option name="secondScaleDim" value="0" />
+        <option name="secondScaleMax" value="1.0" />
+        <option name="secondScaleMin" value="0.0" />
+        <option name="secondScaleStream" value="1" />
+        <option name="size" value="20.0" />
+      </options>
+      <providerList>
+        <providerId id="229904984" />
+      </providerList>
+    </consumer>
+  </consumerList>
+  <eventHandlerList />
+  <modelList />
+  <annotation class="hcm.ssj.core.Annotation" id="225749510" fileName="anno" filePath="/storage/emulated/0/SSJ/[time]" />
+</ssjSaveFile>
